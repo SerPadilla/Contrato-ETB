@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edege">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato Natural</title>
+    <style>
+        #contenido {
+            display: none;
+        }
+        #capturaTexto {
+            display: inline;
+            border-bottom: 1px dashed #000;
+            cursor: pointer; 
+        }    
+       
+
+    </style>
+
+    <header>
+
+        <div class="menu container">
+            <h1><a href="index.html">Inicio</a></h1>
+
+        </div>
+
+        <div class="header-content container">
+            <div class="content">
+
+                <h2>
+                    Saludo
+                </h2>
+
+                <p>
+                    Señor(a) <span class="parrafoGuardado" id="parrafo1"> </span> le indico que la llamada está siendo grabada por motivos de calidad y seguimiento.
+                        A continuación, validaremos en sistemas el correcto funcionamiento de sus servicios de
+                        telecomunicaciones
+                        que actualmente tiene con nosotros.
+                    </p>
+                
+            </div>
+
+            <body>
+
+                <button onclick="mostrarContenido()">Titularidad</button>
+            
+                <div id="contenido">
+                    
+                    ¿Conoce usted al titular del servicio?</p>
+                <p>
+                <h4>Si conoce el titular:</h4>
+                </p>
+                <p>¿Cuál es la relación tiene con el Titular? (hijo, hermano, abuelo, etc.)</p>
+                <p>¿Puede ubicarlo para que él realice la aceptación del trámite en este momento?</p>
+                <p> ¿puede darnos un número de contacto para comunicarnos con el titular? ( Ya que el quien puede
+                    realizar la aceptación del trámite o ceder el contrato.)</p>
+
+                <p>No conoce el titular:</p>
+
+                <p> ¿Usted es quien hace uso y paga el servicio de ETB?</p>
+                <p>¿Me confirma la dirección y teléfono del servicio?</p>
+                <p></p>¿Acepta el cambio de titularidad?</p>
+                <p>( si acepta el cambio de titularidad proceda al cambio de suscriptor )</p>
+
+                </div>
+            
+                <script>
+                    function mostrarContenido() {
+                        var contenido = document.getElementById('contenido');
+            
+                        if (contenido.style.display === 'none') {
+                            contenido.style.display = 'block';
+                        } else {
+                            contenido.style.display = 'none';
+                        }
+                    }
+                </script>     
+
+            <div class="header-content container">
+                <div class="content">
+
+                    <h2>
+                        Habeas Data
+                    </h2>
+
+                    <p>                      
+                            Señor <span class="parrafoGuardado" id="parrafo1"> </span> de acuerdo a la ley de protección de datos personales 1581 de 2012 ¿Autoriza a ETB a
+                            recolectar sus datos personales con fines comerciales y contractuales?
+                            De acuerdo con lo anterior, si su respuesta es afirmativa,responda"SI". SI= continuar con la
+                            migración
+
+                        </p>
+                    </h4>
+                </div>
+                <div class="header-content container">
+                    <div class="content">
+
+                        <h2>
+                            Canales de Atención
+                        </h2>
+
+                        
+                            <p>
+                                Señor <span class="parrafoGuardado" id="parrafo1"> </span> tienes derecho a elegir los canales por los cuales deseas que ETB se comunique
+                                para fines comerciales, publicitarios y gestión de cartera de acuerdo con la Ley 2300 de
+                                2023. Elige canal de contacto [uno o varios]:
+                                Llamadas, WhatsApp, Correo electrónico y SMS.
+                                Gracias, Señor <span class="parrafoGuardado" id="parrafo1"> </span> registramos el medio de contacto en nuestros sistemas
+                            </p>
+                        
+                    </div>
+                    <div class="header-content container">
+                        <div class="content">
+
+                            <h2>
+
+                            </h2>                            
+                        </div>
+                        <div class="header-content container">
+                            <div class="content">
+                                <h2>
+                                    Autorización centrales de riezgo
+                                </h2>
+
+                               
+                                    <p>
+                                        ¿Autoriza usted a ETB, para que, consulte, actualice o reporte su comportamiento
+                                        crediticio a centrales de riesgo?
+                                        De acuerdo con lo anterior, si su respuesta es afirmativa,responda"SI". SI=
+                                        continuar con la migración.
+
+                                    </p>
+                        <div class="header-content container">
+                                <div class="content">
+                                            <h2>
+                                                Validación Cliente 
+                                            </h2>
+            
+
+
+                               
+                            </div>
+                            <label for="cuadroTexto10">Su nombre completo:</label>
+                            <input id="campoTexto" type="text" style="width: 300px">                          
+                                
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var campoTexto = document.getElementById('campoTexto');
+            var parrafosGuardados = document.querySelectorAll('.parrafoGuardado');
+
+            campoTexto.addEventListener('input', function(event) {
+                var textoCapturado = campoTexto.value;
+
+                // Actualiza el contenido en todos los párrafos guardados
+                parrafosGuardados.forEach(function(parrafo) {
+                    parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado;
+                });
+            });
+        });
+    </script>    
+    <p>
+
+    </p>                                    
+                     </div>
+                   
+                    <label for="cuadroTexto10">Numero de documento de identicación: y Tipo:</label>
+                    <input id="campoTexto" type="text" style="width: 200px"> 
+                    <input id="campoTexto" type="text" style="width: 100px"> 
+                    <p></p>
+                    <label for="cuadroTexto10">Fecha de expedición del documento:</label>
+                    <input id="campoTexto" type="text" style="width: 200px"> 
+                    <p></p>
+                    <label for="cuadroTexto10">Dirección completa en la cual se instalarán los servicios:</label>
+                    <input id="campoTexto" type="text" style="width: 200px"> 
+                    <p></p>
+                    <label for="cuadroTexto10">Barrio:</label>
+                    <input id="campoTexto" type="text" style="width: 200px"> 
+                    <p></p>
+                    <label for="cuadroTexto10">Estrato:</label>
+                    <input id="campoTexto" type="text" style="width: 200px">    
+                    <p></p>
+                            
+                        <label for="inputPalabra">Correo electronico:
+
+                                <input type="text" id="inputPalabra" oninput="reemplazarLetras()"rows="1" cols="10" style="height: 15px; width:300px ;"></textarea>
+                                            <div id="resultado" class="palabra-reemplazada" ></div>
+                                            
+                                           
+
+                                                <script>
+
+                                                    var palabrasReemplazo = {
+                                                        'a': ' avion ', 'b': ' banana', 'c': ' carro', 'd': ' dedo', 'e': ' elefante',
+                                                        'f': ' foca', 'g': ' gato', 'h': ' hilo', 'i': ' iglesia', 'j': ' jabon', 'k': ' kilo', 'l': ' limón',
+                                                        // Agrega más letras y palabras según sea necesario
+                                                    };
+
+                                                    function reemplazarLetras() {
+                                                        var palabraOriginal = document.getElementById('inputPalabra').value;
+                                                        var resultado = document.getElementById('resultado');
+
+                                                        // Limpiar el contenido anterior
+                                                        resultado.innerHTML = '';
+
+                                                        // Reemplazar cada letra con la palabra correspondiente
+                                                        var nuevaPalabra = 'Correo electronico deletreado es:  '
+                                                        for (var i = 0; i < palabraOriginal.length; i++) {
+                                                            var letraActual = palabraOriginal[i].toLowerCase(); // Convertir a minúsculas para asegurar la coincidencia
+                                                            var palabraReemplazo = palabrasReemplazo[letraActual] || letraActual; // Usar la palabra de reemplazo o la letra original
+                                                            nuevaPalabra += palabraReemplazo;
+
+                                                        }
+
+                                                        var span = document.createElement('span');
+                                                        span.textContent = nuevaPalabra;
+                                                        resultado.appendChild(span);
+                                                    }
+
+                                                </script>
+                                                <p></p>
+                                                <label for="cuadroTexto10">Telefonos de contacto:</label>
+                                                <input id="campoTexto" type="text" style="width: 300px">    
+                                                <p></p>
+
+                                                    
+                                                  
+
+                                                        </script>
+                                                    </div>
+
+
+<div>
+    <h2>
+    Validación oferta
+</h2>
+</div>
+
+<label for="cuadroTexto7">La oferta adquirida es:</label>
+    <input type="text" id="cuadroTexto7">
+    <p></p>
+<label for="cuadroTexto8">Segmento:</label>
+    <input type="text" id="cuadroTexto8">
+    <p></p>
+<label for="cuadroTexto9">Promoción:</label>
+    <input type="text" id="cuadroTexto9">
+    <p></p>
+    <label for="cuadroTexto6">Valor total de la factura:</label>
+    <input type="text" id="cuadroTexto6">
+
+
+    <div>
+       Adicional
+    </div>    
+    
+<div id="container">
+    <h4>CUN:<textarea id="cuadroTexto3" class=" cuadroTexto"
+        rows="1" cols="50" style=" height: 10px; width:150px ;"></textarea></h4> 
+<div id="container">
+    <h4>Linea a migrar:<textarea id="cuadroTexto3" class=" cuadroTexto"
+        rows="1" cols="50" style=" height: 10px; width:150px ;"></textarea></h4>         
+
+    <div>
+           Validación oferta
+    </div>   
+
+    <div id="resultado7">La oferta adquirida es:</div>
+    <div id="resultado8">Segmento:</div> 
+    <div id="resultado9">Promoción:</div> 
+    <div id="resultado6">Valor de la oferta:</div>  
+    
+
+    
+ 
+    
+
+    <script>
+        var cuadroTexto6 = document.getElementById('cuadroTexto6');
+        var resultado6 = document.getElementById('resultado6');
+
+        cuadroTexto6.addEventListener('input', function() {
+            var complemento = this.value.trim();
+            
+            if (complemento !== '') {
+                resultado6.textContent = 'Valor de la factura: ' + complemento;
+            } else {
+                resultado6.textContent = 'Valor de la factura:';
+            }
+        });
+
+
+
+        var cuadroTexto7 = document.getElementById('cuadroTexto7');
+        var resultado7 = document.getElementById('resultado7');
+
+        cuadroTexto7.addEventListener('input', function() {
+            var complemento = this.value.trim();
+            
+            if (complemento !== '') {
+                resultado7.textContent = 'La oferta adquirida es: ' + complemento;
+            } else {
+                resultado7.textContent = 'La información complementaria es:';
+            }
+        });
+
+        var cuadroTexto8 = document.getElementById('cuadroTexto8');
+        var resultado8 = document.getElementById('resultado8');
+
+        cuadroTexto8.addEventListener('input', function() {
+            var complemento = this.value.trim();
+            
+            if (complemento !== '') {
+                resultado8.textContent = 'Segmento: ' + complemento;
+            } else {
+                resultado8.textContent = 'La información complementaria es:';
+            }
+        });
+
+        var cuadroTexto9 = document.getElementById('cuadroTexto9');
+        var resultado9 = document.getElementById('resultado9');
+
+        cuadroTexto9.addEventListener('input', function() {
+            var complemento = this.value.trim();
+            
+            if (complemento !== '') {
+                resultado9.textContent = 'Promoción: ' + complemento;
+            } else {
+                resultado9.textContent = 'La infomación complementaria es:';
+            }
+        });
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    </header>
+    </body>
+</head>
+
+</html>

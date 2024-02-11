@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*CSS Reset*/
+
+* {
+    padding: 100;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.body {
+
+    font-family: 'Poppins', sans-serif;
+}
+/*Navegación*/
+
+.header {
+    width: 100%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+nav{
+    height: 110px;
+    max-width: 1200px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.logo{
+    width: 40px;
+    margin-left: 20px;
+    position: fixed;
+          
+}
+.bar-btn{
+    font-size: 25px;
+    color:#140d0d;
+    margin-right: 10px;
+    cursor: pointer;
+       
+
+}
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgb(243, 243, 238);
+    text-align: center;
+    transition: all 0.5s;
+}
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all 0.5s;    
+}
+.nav-menu li a {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    
+}
+.nav-menu li a.active,
+.nav-menu li a:hover {
+    color: rgb(0, 0, 0);
+    transition: 0.10s;
+}
+#check {
+    display: none;
+}
+
+#check:checked ~ .nav-menu{
+    height: 100vh;
+
+}
+#check:checked ~ .nav-menu li {
+    display: block;
+}
+.banner-text{
+    padding: 10px;
+    text-align: center;
+
+}
+.banner-text h1{
+    color:rgb(255, 255, 255);
+    font-size: 40px;
+    text-transform: uppercase;    
+}
+
+.banner-text p {
+    color:rgb(0, 0, 0);
+    font-size: 18PX;
+    padding: 100px;  
+}
+.btn-a {
+    display: inline-block;
+    background-color: #e4dede;
+    margin-top: 30px;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    border-radius: 25px;
+
+}
+header{
+    background-image: url(imagen/hero.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    align-items: center;
+}
+.btn-a:hover{
+    background-color: rgba(124, 124, 216, 0.788);
+}
+
+/*Titularidad*/
+
+.extra{
+    display: none;
+}
+
+
+
+
+
+
+
+

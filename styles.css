@@ -34,9 +34,10 @@ nav{
     
 }
 .logo{
-    width: 40px;
-    margin-left: 20px;
-    position: fixed;
+    width: 60px;
+    margin-left: 30px;
+    margin-block: 50px;
+    
           
 }
 .bar-btn{

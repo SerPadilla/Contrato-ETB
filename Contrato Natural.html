@@ -170,21 +170,24 @@
                             </p>
                         </div>
 
-                        <label for="cuadroTexto10">Numero de documento de identicación: y Tipo:</label>
-                        <input id="campoTexto" type="text" style="width: 200px">
-                        <input id="campoTexto" type="text" style="width: 100px">
+                        <label for="cuadroTexto11">Su tipo y Numero de documento es:</label>
+                        <input type="text" id="cuadroTexto11" style="width: 200px">
                         <p></p>
-                        <label for="cuadroTexto10">Fecha de expedición del documento:</label>
-                        <input id="campoTexto" type="text" style="width: 200px">
+                        <label for="cuadroTexto12">Su fecha de expedición del documento es :</label>
+                        <input type="text" id="cuadroTexto12" style="width: 200px">
+
                         <p></p>
-                        <label for="cuadroTexto10">Dirección completa en la cual se instalarán los servicios:</label>
-                        <input id="campoTexto" type="text" style="width: 200px">
+                        <label for="cuadroTexto13">Su dirección completa de instalación del predio es :</label>
+                        <input type="text" id="cuadroTexto13" style="width: 300px">
                         <p></p>
-                        <label for="cuadroTexto10">Barrio:</label>
-                        <input id="campoTexto" type="text" style="width: 200px">
+                        <label for="cuadroTexto17">Tipo de edificación :</label>
+                        <input type="text" id="cuadroTexto17" style="width: 200px">
                         <p></p>
-                        <label for="cuadroTexto10">Estrato:</label>
-                        <input id="campoTexto" type="text" style="width: 200px">
+                        <label for="cuadroTexto14">Barrio :</label>
+                        <input type="text" id="cuadroTexto14" style="width: 300px">
+                        <p></p>
+                        <label for="cuadroTexto15">Estrato:</label>
+                        <input type="text" id="cuadroTexto15" style="width: 100px">
                         <p></p>
 
                         <label for="inputPalabra">Correo electronico:
@@ -226,11 +229,9 @@
 
                             </script>
                             <p></p>
-                            <label for="cuadroTexto10">Telefonos de contacto:</label>
-                            <input id="campoTexto" type="text" style="width: 300px">
+                            <label for="cuadroTexto15">Telefonos de contacto:</label>
+                        <input type="text" id="cuadroTexto15" style="width: 300px">
                             <p></p>
-
-
 
 
                             </script>
@@ -255,8 +256,8 @@
                     <label for="cuadroTexto6">Valor total de la factura:</label>
                     <input type="text" id="cuadroTexto6">
                     <p></p>
-                    <label for="cuadroTexto5">Agenda y franja:</label>
-                    <input type="text" id="cuadroTexto5">
+                    <label for="cuadroTexto4">Agenda y franja:</label>
+                    <input type="text" id="cuadroTexto4">
 
 
                     <div>
@@ -279,19 +280,19 @@
                     <div id="resultado8">Segmento:</div>
                     <div id="resultado9">Promoción:</div>
                     <div id="resultado6">Valor de la oferta:</div>
-                    <div id="resultado5">Agenda y franja:</div>
+                    <div id="resultado4">Agenda y franja:</div>
 
                     <script>
-                        var cuadroTexto5 = document.getElementById('cuadroTexto5');
-                        var resultado5 = document.getElementById('resultado6');
+                        var cuadroTexto4 = document.getElementById('cuadroTexto4');
+                        var resultado4 = document.getElementById('resultado4');
 
-                        cuadroTexto5.addEventListener('input', function () {
+                        cuadroTexto4.addEventListener('input', function () {
                             var complemento = this.value.trim();
 
                             if (complemento !== '') {
-                                resultado5.textContent = 'Agenda y franja: ' + complemento;
+                                resultado4.textContent = 'Agenda y franja: ' + complemento;
                             } else {
-                                resultado5.textContent = 'Agenda y franja:';
+                                resultado4.textContent = 'Agenda y franja:';
                             }
                         });
                         var cuadroTexto6 = document.getElementById('cuadroTexto6');
@@ -373,6 +374,129 @@
                         será grabada para el contrato verbal. Generaremos el proceso de validación y aprobación de la
                         información suministrada, por favor responda "SI", a las siguientes preguntas</p>
            <p>Le confirmo sus datos son los siguientes:</p>
+        <h2>Validación de datos</h2>
+
+        <p>Su nombre completo es: <span class="parrafoGuardado" id="parrafo1"> </span></p>
+
+        <div id="resultado11">Su tipo y número de documento de identidad es CC/CE/NIT :</div>
+        <script>
+            var cuadroTexto11 = document.getElementById('cuadroTexto11');
+            var resultado11 = document.getElementById('resultado11');
+    
+            cuadroTexto11.addEventListener('input', function() {
+                var complemento = this.value.trim();
+                
+                if (complemento !== '') {
+                    resultado11.textContent = 'Su tipo y número de documento de identidad es CC/CE/NIT: ' + complemento;
+                } else {
+                    Resultado11.textContent = 'La información complementaria es:';
+                }
+            });    
+    </script>
+    <P></P>
+    <div id="resultado12">Su fecha de expedición del documento es: </div>
+
+    <script>
+        var cuadroTexto12 = document.getElementById('cuadroTexto12');
+        var resultado12 = document.getElementById('resultado12');
+
+        cuadroTexto12.addEventListener('input', function() {
+            var complemento = this.value.trim();
+            
+            if (complemento !== '') {
+                resultado12.textContent = 'Su fecha de expedición del documento es: ' + complemento;
+            } else {
+                Resultado12.textContent = 'ERROR:';
+            }
+        });
+
+</script>
+<P></P>
+<div id="resultado13">Su dirección completa de instalación del predio es :</div>
+<script>
+    var cuadroTexto13 = document.getElementById('cuadroTexto13');
+    var resultado13 = document.getElementById('resultado13');
+
+    cuadroTexto13.addEventListener('input', function() {
+        var complemento = this.value.trim();
+        
+        if (complemento !== '') {
+            resultado13.textContent = 'Su dirección completa de instalación del predio es :' + complemento;
+        } else {
+            Resultado13.textContent = 'ERROR';
+        }
+    });
+</script>
+<p></p>
+<div id="resultado17">Su tipo de edificación es :</div>
+<script>
+    var cuadroTexto17 = document.getElementById('cuadroTexto17');
+    var resultado17 = document.getElementById('resultado17');
+
+    cuadroTexto17.addEventListener('input', function() {
+        var complemento = this.value.trim();
+        
+        if (complemento !== '') {
+            resultado17.textContent = 'Su tipo de edificación es : ' + complemento;
+        } else {
+            Resultado17.textContent = 'ERROR:';
+        }
+    });
+
+</script>
+<P></P>
+<div id="resultado14">Su servicio se encuentra ubicado en el barrio: </div>
+<script>
+    var cuadroTexto14 = document.getElementById('cuadroTexto14');
+    var resultado14 = document.getElementById('resultado14');
+
+    cuadroTexto14.addEventListener('input', function() {
+        var complemento = this.value.trim();
+        
+        if (complemento !== '') {
+            resultado14.textContent = 'Su servicio se encuentra ubicado en el barrio : ' + complemento;
+        } else {
+            Resultado14.textContent = 'ERROR:';
+        }
+    });
+</script>
+<P></P>
+<div id="resultado15">Su estrato es :</div>
+<script>
+    var cuadroTexto15 = document.getElementById('cuadroTexto15');
+    var resultado15 = document.getElementById('resultado15');
+
+    cuadroTexto15.addEventListener('input', function() {
+        var complemento = this.value.trim();
+        
+        if (complemento !== '') {
+            resultado15.textContent = 'Su estrato es : ' + complemento;
+        } else {
+            Resultado15.textContent = 'ERROR:';
+        }
+    });
+
+</script>
+<p></p>
+<p>   
+
+</p> Señor <span class="parrafoGuardado" id="parrafo1"></span>  Le confirmo su correo electronico
+
+
+
+
+
+
+    
+    
+        
+        
+
+
+
+
+
+
 
     </header>
 </body>

@@ -10,13 +10,13 @@
         #contenido {
             display: none;
         }
-        
+
         #capturaTexto {
             display: inline;
             border-bottom: 1px dashed #000;
             cursor: pointer;
         }
-    </style> 
+    </style>
 
     <header>
 
@@ -201,8 +201,8 @@
                             <script>
 
                                 var palabrasReemplazo = {
-                                    'a': ' avion ', 'b': ' banana', 'c': ' carro', 'd': ' dedo', 'e': ' elefante',
-                                    'f': ' foca', 'g': ' gato', 'h': ' hilo', 'i': ' iglesia', 'j': ' jabon', 'k': ' kilo', 'l': ' limón',
+                                    'a': ' avion', 'b': ' barco', 'c': ' carro', 'd': ' dedo', 'e': ' elefante', 'f': ' foca', 'g': ' gato', 'h': ' hilo', 'i': ' iglesia', 'j': ' jabón', 'k': ' kilo', 'l': ' limón', 'm': ' mamá', 'n': ' nube', 'o': ' oso', 'p': ' perro', 'q': ' queso', 'r': ' ratón', 's': ' sol', 't': ' tigre', 'u': ' uva', 'v': ' vela', 'w': ' whisky', 'x': ' xilofono', 'y': ' yogurt', 'z': ' zapato',
+
                                     // Agrega más letras y palabras según sea necesario
                                 };
 
@@ -229,8 +229,8 @@
 
                             </script>
                             <p></p>
-                            <label for="cuadroTexto15">Telefonos de contacto:</label>
-                        <input type="text" id="cuadroTexto15" style="width: 300px">
+                            <label for="cuadroTexto18">Telefonos de contacto:</label>
+                            <input type="text" id="cuadroTexto18" style="width: 300px">
                             <p></p>
 
 
@@ -244,22 +244,20 @@
                         </h2>
                     </div>
 
-                    <label for="cuadroTexto7">La oferta adquirida es:</label>
-                    <input type="text" id="cuadroTexto7">
+                    <label for="cuadroTexto7">La oferta adquirida es :</label>
+                    <input type="text" id="campoTexto7"  style="width: 300px">
                     <p></p>
-                    <label for="cuadroTexto8">Segmento:</label>
-                    <input type="text" id="cuadroTexto8">
+                    <label for="cuadroTexto8">Segmento :</label>
+                    <input type="text" id="campoTexto8"  style="width: 300px">
                     <p></p>
-                    <label for="cuadroTexto9">Promoción:</label>
-                    <input type="text" id="cuadroTexto9">
+                    <label for="cuadroTexto9">Promoción :</label>
+                    <input type="text" id="campoTexto9"  style="width: 300px">
                     <p></p>
-                    <label for="cuadroTexto6">Valor total de la factura:</label>
-                    <input type="text" id="cuadroTexto6">
+                   <label for="cuadroTexto6">Valor de la factura es :</label>
+                    <input type="text" id="campoTexto6"  style="width: 300px">
                     <p></p>
-                    <label for="cuadroTexto4">Agenda y franja:</label>
-                    <input type="text" id="cuadroTexto4">
-
-
+                    <label for="cuadroTexto4">Agenda y franja :</label>
+                    <input type="text" id="campoTexto4"  style="width: 300px">
                     <div>
                         <h2>Adicional </h2>
                     </div>
@@ -270,84 +268,87 @@
                     <label for="cuadroTexto">Linea a migrar:</label>
                     <input id="campoTexto" type="text" style="width: 200px">
                     <p></p>
-
-
                     <div>
                         <h3> Validación oferta</h3>
                     </div>
 
-                    <div id="resultado7">La oferta adquirida es:</div>
-                    <div id="resultado8">Segmento:</div>
-                    <div id="resultado9">Promoción:</div>
-                    <div id="resultado6">Valor de la oferta:</div>
-                    <div id="resultado4">Agenda y franja:</div>
+                    <p>La oferta adquirida es : <span class="parrafoGuardado7" id="parrafo7"> </span></p>
+                    <p>Segmento : <span class="parrafoGuardado8" id="parrafo8"> </span></p>
+                    <p>Promoción :  <span class="parrafoGuardado9" id="parrafo9"> </span></p>
+                    <p>Valor de la factura :  <span class="parrafoGuardado6" id="parrafo6"> </span></p>
+                    <p>Agenda y Franja:  <span class="parrafoGuardado4" id="parrafo4"> </span></p>
 
                     <script>
-                        var cuadroTexto4 = document.getElementById('cuadroTexto4');
-                        var resultado4 = document.getElementById('resultado4');
+                       document.addEventListener('DOMContentLoaded', function () {
+                                    var campoTexto4 = document.getElementById('campoTexto4');
+                                    var parrafosGuardados4 = document.querySelectorAll('.parrafoGuardado4');
 
-                        cuadroTexto4.addEventListener('input', function () {
-                            var complemento = this.value.trim();
+                                    campoTexto4.addEventListener('input', function (event) {
+                                        var textoCapturado4 = campoTexto4.value;
 
-                            if (complemento !== '') {
-                                resultado4.textContent = 'Agenda y franja: ' + complemento;
-                            } else {
-                                resultado4.textContent = 'Agenda y franja:';
-                            }
-                        });
-                        var cuadroTexto6 = document.getElementById('cuadroTexto6');
-                        var resultado6 = document.getElementById('resultado6');
+                                        // Actualiza el contenido en todos los párrafos guardados
+                                        parrafosGuardados4.forEach(function (parrafo) {
+                                            parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado4;
+                                        });
+                                    });
+                                });
 
-                        cuadroTexto6.addEventListener('input', function () {
-                            var complemento = this.value.trim();
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    var campoTexto6 = document.getElementById('campoTexto6');
+                                    var parrafosGuardados6 = document.querySelectorAll('.parrafoGuardado6');
 
-                            if (complemento !== '') {
-                                resultado6.textContent = 'Valor de la factura: ' + complemento;
-                            } else {
-                                resultado6.textContent = 'Valor de la factura:';
-                            }
-                        });
+                                    campoTexto6.addEventListener('input', function (event) {
+                                        var textoCapturado6 = campoTexto6.value;
 
+                                        // Actualiza el contenido en todos los párrafos guardados
+                                        parrafosGuardados6.forEach(function (parrafo) {
+                                            parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado6;
+                                        });
+                                    });
+                                });
+                        
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    var campoTexto7 = document.getElementById('campoTexto7');
+                                    var parrafosGuardados7 = document.querySelectorAll('.parrafoGuardado7');
 
+                                    campoTexto7.addEventListener('input', function (event) {
+                                        var textoCapturado7 = campoTexto7.value;
 
-                        var cuadroTexto7 = document.getElementById('cuadroTexto7');
-                        var resultado7 = document.getElementById('resultado7');
+                                        // Actualiza el contenido en todos los párrafos guardados
+                                        parrafosGuardados7.forEach(function (parrafo) {
+                                            parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado7;
+                                        });
+                                    });
+                                });
+                           
 
-                        cuadroTexto7.addEventListener('input', function () {
-                            var complemento = this.value.trim();
+                        document.addEventListener('DOMContentLoaded', function () {
+                                    var campoTexto8 = document.getElementById('campoTexto8');
+                                    var parrafosGuardados8 = document.querySelectorAll('.parrafoGuardado8');
 
-                            if (complemento !== '') {
-                                resultado7.textContent = 'La oferta adquirida es: ' + complemento;
-                            } else {
-                                resultado7.textContent = 'La información complementaria es:';
-                            }
-                        });
+                                    campoTexto8.addEventListener('input', function (event) {
+                                        var textoCapturado8 = campoTexto8.value;
 
-                        var cuadroTexto8 = document.getElementById('cuadroTexto8');
-                        var resultado8 = document.getElementById('resultado8');
+                                        // Actualiza el contenido en todos los párrafos guardados
+                                        parrafosGuardados8.forEach(function (parrafo) {
+                                            parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado8;
+                                        });
+                                    });
+                                });
 
-                        cuadroTexto8.addEventListener('input', function () {
-                            var complemento = this.value.trim();
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    var campoTexto9 = document.getElementById('campoTexto9');
+                                    var parrafosGuardados9 = document.querySelectorAll('.parrafoGuardado9');
 
-                            if (complemento !== '') {
-                                resultado8.textContent = 'Segmento: ' + complemento;
-                            } else {
-                                resultado8.textContent = 'La información complementaria es:';
-                            }
-                        });
+                                    campoTexto9.addEventListener('input', function (event) {
+                                        var textoCapturado9 = campoTexto9.value;
 
-                        var cuadroTexto9 = document.getElementById('cuadroTexto9');
-                        var resultado9 = document.getElementById('resultado9');
-
-                        cuadroTexto9.addEventListener('input', function () {
-                            var complemento = this.value.trim();
-
-                            if (complemento !== '') {
-                                resultado9.textContent = 'Promoción: ' + complemento;
-                            } else {
-                                resultado9.textContent = 'La infomación complementaria es:';
-                            }
-                        });
+                                        // Actualiza el contenido en todos los párrafos guardados
+                                        parrafosGuardados9.forEach(function (parrafo) {
+                                            parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado9;
+                                        });
+                                    });
+                                });
                     </script>
                     <div>
                         <h2>
@@ -370,135 +371,165 @@
                     </p>
 
                     <h2>Huella de voz</h2>
-                    <p> Serñor <span class="parrafoGuardado" id="parrafo1"> </span> a partir de este momento vamos a validar el servicio que está contratando con ETB. Esta llamada
+                    <p> Serñor <span class="parrafoGuardado" id="parrafo1"> </span> a partir de este momento vamos a
+                        validar el servicio que está contratando con ETB. Esta llamada
                         será grabada para el contrato verbal. Generaremos el proceso de validación y aprobación de la
                         información suministrada, por favor responda "SI", a las siguientes preguntas</p>
-           <p>Le confirmo sus datos son los siguientes:</p>
-        <h2>Validación de datos</h2>
+                    <p>Le confirmo sus datos son los siguientes:</p>
+                    <h2>Validación de datos</h2>
 
-        <p>Su nombre completo es: <span class="parrafoGuardado" id="parrafo1"> </span></p>
+                    <p>Su nombre completo es: <span class="parrafoGuardado" id="parrafo1"> </span></p>
 
-        <div id="resultado11">Su tipo y número de documento de identidad es CC/CE/NIT :</div>
-        <script>
-            var cuadroTexto11 = document.getElementById('cuadroTexto11');
-            var resultado11 = document.getElementById('resultado11');
-    
-            cuadroTexto11.addEventListener('input', function() {
-                var complemento = this.value.trim();
-                
-                if (complemento !== '') {
-                    resultado11.textContent = 'Su tipo y número de documento de identidad es CC/CE/NIT: ' + complemento;
-                } else {
-                    Resultado11.textContent = 'La información complementaria es:';
-                }
-            });    
-    </script>
-    <P></P>
-    <div id="resultado12">Su fecha de expedición del documento es: </div>
+                    <div id="resultado11">Su tipo y número de documento de identidad es CC/CE/NIT :</div>
+                    <script>
+                        var cuadroTexto11 = document.getElementById('cuadroTexto11');
+                        var resultado11 = document.getElementById('resultado11');
 
-    <script>
-        var cuadroTexto12 = document.getElementById('cuadroTexto12');
-        var resultado12 = document.getElementById('resultado12');
+                        cuadroTexto11.addEventListener('input', function () {
+                            var complemento = this.value.trim();
 
-        cuadroTexto12.addEventListener('input', function() {
-            var complemento = this.value.trim();
-            
-            if (complemento !== '') {
-                resultado12.textContent = 'Su fecha de expedición del documento es: ' + complemento;
-            } else {
-                Resultado12.textContent = 'ERROR:';
-            }
-        });
+                            if (complemento !== '') {
+                                resultado11.textContent = 'Su tipo y número de documento de identidad es CC/CE/NIT: ' + complemento;
+                            } else {
+                                Resultado11.textContent = 'La información complementaria es:';
+                            }
+                        });    
+                    </script>
+                    <P></P>
+                    <div id="resultado12">Su fecha de expedición del documento es: </div>
 
-</script>
-<P></P>
-<div id="resultado13">Su dirección completa de instalación del predio es :</div>
-<script>
-    var cuadroTexto13 = document.getElementById('cuadroTexto13');
-    var resultado13 = document.getElementById('resultado13');
+                    <script>
+                        var cuadroTexto12 = document.getElementById('cuadroTexto12');
+                        var resultado12 = document.getElementById('resultado12');
 
-    cuadroTexto13.addEventListener('input', function() {
-        var complemento = this.value.trim();
-        
-        if (complemento !== '') {
-            resultado13.textContent = 'Su dirección completa de instalación del predio es :' + complemento;
-        } else {
-            Resultado13.textContent = 'ERROR';
-        }
-    });
-</script>
-<p></p>
-<div id="resultado17">Su tipo de edificación es :</div>
-<script>
-    var cuadroTexto17 = document.getElementById('cuadroTexto17');
-    var resultado17 = document.getElementById('resultado17');
+                        cuadroTexto12.addEventListener('input', function () {
+                            var complemento = this.value.trim();
 
-    cuadroTexto17.addEventListener('input', function() {
-        var complemento = this.value.trim();
-        
-        if (complemento !== '') {
-            resultado17.textContent = 'Su tipo de edificación es : ' + complemento;
-        } else {
-            Resultado17.textContent = 'ERROR:';
-        }
-    });
+                            if (complemento !== '') {
+                                resultado12.textContent = 'Su fecha de expedición del documento es: ' + complemento;
+                            } else {
+                                Resultado12.textContent = 'ERROR:';
+                            }
+                        });
 
-</script>
-<P></P>
-<div id="resultado14">Su servicio se encuentra ubicado en el barrio: </div>
-<script>
-    var cuadroTexto14 = document.getElementById('cuadroTexto14');
-    var resultado14 = document.getElementById('resultado14');
+                    </script>
+                    <P></P>
+                    <div id="resultado13">Su dirección completa de instalación del predio es :</div>
+                    <script>
+                        var cuadroTexto13 = document.getElementById('cuadroTexto13');
+                        var resultado13 = document.getElementById('resultado13');
 
-    cuadroTexto14.addEventListener('input', function() {
-        var complemento = this.value.trim();
-        
-        if (complemento !== '') {
-            resultado14.textContent = 'Su servicio se encuentra ubicado en el barrio : ' + complemento;
-        } else {
-            Resultado14.textContent = 'ERROR:';
-        }
-    });
-</script>
-<P></P>
-<div id="resultado15">Su estrato es :</div>
-<script>
-    var cuadroTexto15 = document.getElementById('cuadroTexto15');
-    var resultado15 = document.getElementById('resultado15');
+                        cuadroTexto13.addEventListener('input', function () {
+                            var complemento = this.value.trim();
 
-    cuadroTexto15.addEventListener('input', function() {
-        var complemento = this.value.trim();
-        
-        if (complemento !== '') {
-            resultado15.textContent = 'Su estrato es : ' + complemento;
-        } else {
-            Resultado15.textContent = 'ERROR:';
-        }
-    });
+                            if (complemento !== '') {
+                                resultado13.textContent = 'Su dirección completa de instalación del predio es :' + complemento;
+                            } else {
+                                Resultado13.textContent = 'ERROR';
+                            }
+                        });
+                    </script>
+                    <p></p>
+                    <div id="resultado17">Su tipo de edificación es :</div>
+                    <script>
+                        var cuadroTexto17 = document.getElementById('cuadroTexto17');
+                        var resultado17 = document.getElementById('resultado17');
 
-</script>
-<p></p>
-<p>   
+                        cuadroTexto17.addEventListener('input', function () {
+                            var complemento = this.value.trim();
 
-</p> Señor <span class="parrafoGuardado" id="parrafo1"></span>  Le confirmo su correo electronico
+                            if (complemento !== '') {
+                                resultado17.textContent = 'Su tipo de edificación es : ' + complemento;
+                            } else {
+                                Resultado17.textContent = 'ERROR:';
+                            }
+                        });
 
+                    </script>
+                    <P></P>
+                    <div id="resultado14">Su servicio se encuentra ubicado en el barrio: </div>
+                    <script>
+                        var cuadroTexto14 = document.getElementById('cuadroTexto14');
+                        var resultado14 = document.getElementById('resultado14');
 
+                        cuadroTexto14.addEventListener('input', function () {
+                            var complemento = this.value.trim();
 
+                            if (complemento !== '') {
+                                resultado14.textContent = 'Su servicio se encuentra ubicado en el barrio : ' + complemento;
+                            } else {
+                                Resultado14.textContent = 'ERROR:';
+                            }
+                        });
+                    </script>
+                    <P></P>
+                    <div id="resultado15">Su estrato es :</div>
+                    <script>
+                        var cuadroTexto15 = document.getElementById('cuadroTexto15');
+                        var resultado15 = document.getElementById('resultado15');
+
+                        cuadroTexto15.addEventListener('input', function () {
+                            var complemento = this.value.trim();
+
+                            if (complemento !== '') {
+                                resultado15.textContent = 'Su estrato es : ' + complemento;
+                            } else {
+                                Resultado15.textContent = 'ERROR:';
+                            }
+                        });
+
+                    </script>
+                    <p></p>
+                    <p>Señor <span class="parrafoGuardado" id="parrafo1"></span> le confirmo su correo electronico es le
+                        voy a deletrear su correo para dejar registro en la llamada : en el correo usted recibirá
+                        información de su factura, fecha límite de pago y puntos de recaudo de manera rápida y práctica.
+                    </p>
 
 
+                    <div id="resultado18">Sus telefonos de contacto son :</div>
+                    <script>
+                        var cuadroTexto18 = document.getElementById('cuadroTexto18');
+                        var resultado18 = document.getElementById('resultado18');
 
-    
-    
-        
-        
+                        cuadroTexto18.addEventListener('input', function () {
+                            var complemento = this.value.trim();
+
+                            if (complemento !== '') {
+                                resultado18.textContent = 'Sus telefonos de contacto son : ' + complemento;
+                            } else {
+                                Resultado18.textContent = 'ERROR:';
+                            }
+                        });
+
+                    </script>
+                    <h4>¿Esta deacuerdo?</h4>
+
+                    <p>CANALES DE ATENCIÓN</p>
+                    <P></P>
+                    <P>Teniendo en cuenta que usted autorizó los canales por los cuales desea que ETB se comunique para
+                        fines comerciales, publicitarios y gestión de cartera, le informamos que en caso de que lo
+                        requiera puede actualizar esta información a través de la página https://etb.com/ley2300/ </P>
+
+                    <h2>VALIDACIÓN OFERTA</h2>
+                    <p> la oferta adquirida es : <span class="parrafoGuardado7" id="parrafo7"> </span> </p>
+                    <p> Segmento :  <span class="parrafoGuardado8" id="parrafo8"></span></p>
+                    <p> Tecnologia : Fibra Optica En FTTH</p>
+                    <p>Velocidad del internet</p>
+                    <p> Linea ilimitada local (No aplica Single de voz)</p>
+                    <p> Valor total de la factura será de : $ <span class="parrafoGuardado6" id="parrafo6"></span> Iva incluido, TARIFA SUJETA A INCREMENTOS TARIFARIOS </p>
+                    <P> Esta oferta cuenta con la promoción : <span class="parrafoGuardado9" id="parrafo9"></span></p>
+                    <p>La facturación de este servicio sera mensualida </p>
+                    <p> Punto Cableado Opcional (No Aplica Single De Voz) </p>
+                    <p></p>
+                    <p></p>
+                    <p>Parrilla Plus, 115 canales, 75 HD , 30 SD + 10 Emisoras (indicar Numero de Decos) Grabar y Retroceder por 12 Meses (SOLO APLICA EN TRIOS)</p>
+                    <P></P>
+                    <P> ¿ESTA DE ACUERDO?</P>
+                  
 
 
 
-
-
-
-
-    </header>
+                    </header>
 </body>
 </head>
 

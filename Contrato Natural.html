@@ -245,19 +245,19 @@
                     </div>
 
                     <label for="cuadroTexto7">La oferta adquirida es :</label>
-                    <input type="text" id="campoTexto7"  style="width: 300px">
+                    <input type="text" id="campoTexto7" style="width: 300px">
                     <p></p>
                     <label for="cuadroTexto8">Segmento :</label>
-                    <input type="text" id="campoTexto8"  style="width: 300px">
+                    <input type="text" id="campoTexto8" style="width: 300px">
                     <p></p>
                     <label for="cuadroTexto9">Promoción :</label>
-                    <input type="text" id="campoTexto9"  style="width: 300px">
+                    <input type="text" id="campoTexto9" style="width: 300px">
                     <p></p>
-                   <label for="cuadroTexto6">Valor de la factura es :</label>
-                    <input type="text" id="campoTexto6"  style="width: 300px">
+                    <label for="cuadroTexto6">Valor de la factura es :</label>
+                    <input type="text" id="campoTexto6" style="width: 300px">
                     <p></p>
                     <label for="cuadroTexto4">Agenda y franja :</label>
-                    <input type="text" id="campoTexto4"  style="width: 300px">
+                    <input type="text" id="campoTexto4" style="width: 300px">
                     <div>
                         <h2>Adicional </h2>
                     </div>
@@ -274,81 +274,81 @@
 
                     <p>La oferta adquirida es : <span class="parrafoGuardado7" id="parrafo7"> </span></p>
                     <p>Segmento : <span class="parrafoGuardado8" id="parrafo8"> </span></p>
-                    <p>Promoción :  <span class="parrafoGuardado9" id="parrafo9"> </span></p>
-                    <p>Valor de la factura :  <span class="parrafoGuardado6" id="parrafo6"> </span></p>
-                    <p>Agenda y Franja:  <span class="parrafoGuardado4" id="parrafo4"> </span></p>
+                    <p>Promoción : <span class="parrafoGuardado9" id="parrafo9"> </span></p>
+                    <p>Valor de la factura : <span class="parrafoGuardado6" id="parrafo6"> </span></p>
+                    <p>Agenda y Franja: <span class="parrafoGuardado4" id="parrafo4"> </span></p>
 
                     <script>
-                       document.addEventListener('DOMContentLoaded', function () {
-                                    var campoTexto4 = document.getElementById('campoTexto4');
-                                    var parrafosGuardados4 = document.querySelectorAll('.parrafoGuardado4');
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var campoTexto4 = document.getElementById('campoTexto4');
+                            var parrafosGuardados4 = document.querySelectorAll('.parrafoGuardado4');
 
-                                    campoTexto4.addEventListener('input', function (event) {
-                                        var textoCapturado4 = campoTexto4.value;
+                            campoTexto4.addEventListener('input', function (event) {
+                                var textoCapturado4 = campoTexto4.value;
 
-                                        // Actualiza el contenido en todos los párrafos guardados
-                                        parrafosGuardados4.forEach(function (parrafo) {
-                                            parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado4;
-                                        });
-                                    });
+                                // Actualiza el contenido en todos los párrafos guardados
+                                parrafosGuardados4.forEach(function (parrafo) {
+                                    parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado4;
                                 });
-
-                                document.addEventListener('DOMContentLoaded', function () {
-                                    var campoTexto6 = document.getElementById('campoTexto6');
-                                    var parrafosGuardados6 = document.querySelectorAll('.parrafoGuardado6');
-
-                                    campoTexto6.addEventListener('input', function (event) {
-                                        var textoCapturado6 = campoTexto6.value;
-
-                                        // Actualiza el contenido en todos los párrafos guardados
-                                        parrafosGuardados6.forEach(function (parrafo) {
-                                            parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado6;
-                                        });
-                                    });
-                                });
-                        
-                                document.addEventListener('DOMContentLoaded', function () {
-                                    var campoTexto7 = document.getElementById('campoTexto7');
-                                    var parrafosGuardados7 = document.querySelectorAll('.parrafoGuardado7');
-
-                                    campoTexto7.addEventListener('input', function (event) {
-                                        var textoCapturado7 = campoTexto7.value;
-
-                                        // Actualiza el contenido en todos los párrafos guardados
-                                        parrafosGuardados7.forEach(function (parrafo) {
-                                            parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado7;
-                                        });
-                                    });
-                                });
-                           
+                            });
+                        });
 
                         document.addEventListener('DOMContentLoaded', function () {
-                                    var campoTexto8 = document.getElementById('campoTexto8');
-                                    var parrafosGuardados8 = document.querySelectorAll('.parrafoGuardado8');
+                            var campoTexto6 = document.getElementById('campoTexto6');
+                            var parrafosGuardados6 = document.querySelectorAll('.parrafoGuardado6');
 
-                                    campoTexto8.addEventListener('input', function (event) {
-                                        var textoCapturado8 = campoTexto8.value;
+                            campoTexto6.addEventListener('input', function (event) {
+                                var textoCapturado6 = campoTexto6.value;
 
-                                        // Actualiza el contenido en todos los párrafos guardados
-                                        parrafosGuardados8.forEach(function (parrafo) {
-                                            parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado8;
-                                        });
-                                    });
+                                // Actualiza el contenido en todos los párrafos guardados
+                                parrafosGuardados6.forEach(function (parrafo) {
+                                    parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado6;
                                 });
+                            });
+                        });
 
-                                document.addEventListener('DOMContentLoaded', function () {
-                                    var campoTexto9 = document.getElementById('campoTexto9');
-                                    var parrafosGuardados9 = document.querySelectorAll('.parrafoGuardado9');
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var campoTexto7 = document.getElementById('campoTexto7');
+                            var parrafosGuardados7 = document.querySelectorAll('.parrafoGuardado7');
 
-                                    campoTexto9.addEventListener('input', function (event) {
-                                        var textoCapturado9 = campoTexto9.value;
+                            campoTexto7.addEventListener('input', function (event) {
+                                var textoCapturado7 = campoTexto7.value;
 
-                                        // Actualiza el contenido en todos los párrafos guardados
-                                        parrafosGuardados9.forEach(function (parrafo) {
-                                            parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado9;
-                                        });
-                                    });
+                                // Actualiza el contenido en todos los párrafos guardados
+                                parrafosGuardados7.forEach(function (parrafo) {
+                                    parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado7;
                                 });
+                            });
+                        });
+
+
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var campoTexto8 = document.getElementById('campoTexto8');
+                            var parrafosGuardados8 = document.querySelectorAll('.parrafoGuardado8');
+
+                            campoTexto8.addEventListener('input', function (event) {
+                                var textoCapturado8 = campoTexto8.value;
+
+                                // Actualiza el contenido en todos los párrafos guardados
+                                parrafosGuardados8.forEach(function (parrafo) {
+                                    parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado8;
+                                });
+                            });
+                        });
+
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var campoTexto9 = document.getElementById('campoTexto9');
+                            var parrafosGuardados9 = document.querySelectorAll('.parrafoGuardado9');
+
+                            campoTexto9.addEventListener('input', function (event) {
+                                var textoCapturado9 = campoTexto9.value;
+
+                                // Actualiza el contenido en todos los párrafos guardados
+                                parrafosGuardados9.forEach(function (parrafo) {
+                                    parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado9;
+                                });
+                            });
+                        });
                     </script>
                     <div>
                         <h2>
@@ -512,20 +512,52 @@
 
                     <h2>VALIDACIÓN OFERTA</h2>
                     <p> la oferta adquirida es : <span class="parrafoGuardado7" id="parrafo7"> </span> </p>
-                    <p> Segmento :  <span class="parrafoGuardado8" id="parrafo8"></span></p>
+                    <p> Segmento : <span class="parrafoGuardado8" id="parrafo8"></span></p>
                     <p> Tecnologia : Fibra Optica En FTTH</p>
                     <p>Velocidad del internet</p>
                     <p> Linea ilimitada local (No aplica Single de voz)</p>
-                    <p> Valor total de la factura será de : $ <span class="parrafoGuardado6" id="parrafo6"></span> Iva incluido, TARIFA SUJETA A INCREMENTOS TARIFARIOS </p>
+                    <p> Valor total de la factura será de : $ <span class="parrafoGuardado6" id="parrafo6"></span> Iva
+                        incluido, TARIFA SUJETA A INCREMENTOS TARIFARIOS </p>
                     <P> Esta oferta cuenta con la promoción : <span class="parrafoGuardado9" id="parrafo9"></span></p>
                     <p>La facturación de este servicio sera mensualida </p>
                     <p> Punto Cableado Opcional (No Aplica Single De Voz) </p>
                     <p></p>
                     <p></p>
-                    <p>Parrilla Plus, 115 canales, 75 HD , 30 SD + 10 Emisoras (indicar Numero de Decos) Grabar y Retroceder por 12 Meses (SOLO APLICA EN TRIOS)</p>
+                    <p>Parrilla Plus, 115 canales, 75 HD , 30 SD + 10 Emisoras (indicar Numero de Decos) Grabar y
+                        Retroceder por 12 Meses (SOLO APLICA EN TRIOS)</p>
                     <P></P>
                     <P> ¿ESTA DE ACUERDO?</P>
-                  
+                    <P></P>
+                    <p>
+                    <h1>
+                        SVA
+                    </h1>
+                    </p>
+                    <P>• Los siguientes servicios que usted desea adquirir de manera adicional no hacen parte de la
+                        promoción. </P>
+                    <P>• SVA adquirido</P>
+                    <P> ¿ESTA DE ACUERDO?</P>
+                    <P> Señor <span class="parrafoGuardado" id="parrafo1"> </span> , el nuevo servicio contratado no le
+                        genera nueva cláusula de permanencia.</P>
+                    <P></P>
+                    <H2>COMODATO</H2>
+                    <P>Señor(a) <span class="parrafoGuardado" id="parrafo1"> </span> ,Los equipos que se entregan en la
+                        instalación son en comodato, en caso de daño o pérdida usted se hace responsable por el valor
+                        comercial publicado en la página web de ETB.
+                        ¿Acepta usted recibir los equipos que se entregan en la instalación en comodato? De acuerdo con
+                        lo anterior, si su respuesta es afirmativa, responda "SI". (La respuesta del cliente debe ser SÍ
+                        para avanzar)
+                    </P>
+                    <H2>DESPEDIDA</H2>
+                    <P>Gracias por ser parte de ETB, recuerde que hablo con (Nombre y apellido) de ETB, para cualquier
+                        inquietud puede llamarnos a nuestra línea de atención 6013777777 o 018000112170. ¡Hasta pronto!
+                    </P>
+                    <P>"Señor(a) <span class="parrafoGuardado" id="parrafo1"> </span> al realizar el cambio de tecnología en este momento usted aplica un beneficio adicional llamado ETB total donde puede tener hasta 5 línea con nuestros planes preferenciales o tener el beneficio de familia y amigos"
+
+                        RTA si: de acuerdo lo voy a dejar con el asesor preferencial para que le brinden los beneficios.
+                        </P>
+
+
 
 
 

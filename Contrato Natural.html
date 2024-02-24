@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edege">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Contrato Natural</title>
     <style>
         #contenido {
@@ -191,51 +192,73 @@
                         <input type="text" id="cuadroTexto15" style="width: 100px">
                         <p></p>
 
-                        <label for="inputPalabra">Correo electronico:
 
-                            <input type="text" id="inputPalabra" oninput="reemplazarLetras()" rows="1" cols="10"
-                                style="height: 15px; width:300px ;"></textarea>
-                            <div id="resultado" class="palabra-reemplazada"></div>
-
-
-
+                        <body>
+                            <label for="inputPalabra">Correo electrónico:</label>
+                            <input type="text" id="inputPalabra" oninput="reemplazarLetras()" style="height: 15px; width:300px;">
+                            
+                            <div>
+                                
+                            </div>
+                            
+                            <div>
+                                <span id="resultadoInicio" class="palabra-reemplazada"></span>
+                            </div>
+                        
+                            <div>
+                                
+                            </div>
+                        
                             <script>
-
                                 var palabrasReemplazo = {
-                                    'a': ' avion', 'b': ' barco', 'c': ' carro', 'd': ' dedo', 'e': ' elefante', 'f': ' foca', 'g': ' gato', 'h': ' hilo', 'i': ' iglesia', 'j': ' jabón', 'k': ' kilo', 'l': ' limón', 'm': ' mamá', 'n': ' nube', 'o': ' oso', 'p': ' perro', 'q': ' queso', 'r': ' ratón', 's': ' sol', 't': ' tigre', 'u': ' uva', 'v': ' vela', 'w': ' whisky', 'x': ' xilofono', 'y': ' yogurt', 'z': ' zapato',
-
-                                    // Agrega más letras y palabras según sea necesario
+                                    'a': ' avión', 'b': ' barco', 'c': ' carro', 'd': ' dedo', 'e': ' elefante', 'f': ' foca', 'g': ' gato', 'h': ' hilo', 'i': ' iglesia', 'j': ' jabón', 'k': ' kilo', 'l': ' limón', 'm': ' mamá', 'n': ' nube', 'o': ' oso', 'p': ' perro', 'q': ' queso', 'r': ' ratón', 's': ' sol', 't': ' tigre', 'u': ' uva', 'v': ' vela', 'w': ' whisky', 'x': ' xilófono', 'y': ' yogur', 'z': ' zapato',
                                 };
-
+                        
                                 function reemplazarLetras() {
-                                    var palabraOriginal = document.getElementById('inputPalabra').value;
-                                    var resultado = document.getElementById('resultado');
-
-                                    // Limpiar el contenido anterior
-                                    resultado.innerHTML = '';
-
-                                    // Reemplazar cada letra con la palabra correspondiente
-                                    var nuevaPalabra = 'Correo electronico deletreado es:  '
-                                    for (var i = 0; i < palabraOriginal.length; i++) {
-                                        var letraActual = palabraOriginal[i].toLowerCase(); // Convertir a minúsculas para asegurar la coincidencia
-                                        var palabraReemplazo = palabrasReemplazo[letraActual] || letraActual; // Usar la palabra de reemplazo o la letra original
-                                        nuevaPalabra += palabraReemplazo;
-
+                                    var correoOriginal = document.getElementById('inputPalabra').value;
+                                    var correoOriginalElement = document.getElementById('correoOriginal');
+                                    correoOriginalElement.textContent = correoOriginal;
+                        
+                                    var resultadoInicio = document.getElementById('resultadoInicio');
+                                    var resultadoFinal = document.getElementById('resultadoFinal');
+                        
+                                    resultadoInicio.innerHTML = '';
+                                    resultadoFinal.innerHTML = '';
+                        
+                                    var nuevaPalabraInicio = 'Correo electrónico deletreado es ' ;
+                                    var nuevaPalabraFinal = ' ';
+                        
+                                    for (var i = 0; i < correoOriginal.length; i++) {
+                                        var letraActual = correoOriginal[i].toLowerCase();
+                                        var palabraReemplazo = palabrasReemplazo[letraActual] || letraActual;
+                        
+                                        nuevaPalabraInicio += palabraReemplazo;
+                                        nuevaPalabraFinal += palabraReemplazo;
+                        
+                                        var spanInicio = document.createElement('span');
+                                        spanInicio.textContent = palabraReemplazo;
+                                        resultadoInicio.appendChild(spanInicio);
+                        
+                                        var spanFinal = document.createElement('span');
+                                        spanFinal.textContent = palabraReemplazo;
+                                        resultadoFinal.appendChild(spanFinal);
                                     }
-
-                                    var span = document.createElement('span');
-                                    span.textContent = nuevaPalabra;
-                                    resultado.appendChild(span);
+                        
+                                    // Establecer el contenido después del bucle
+                                    resultadoInicio.textContent = nuevaPalabraInicio;
+                                    resultadoFinal.textContent = nuevaPalabraFinal;
                                 }
-
                             </script>
+                        </body>        
+                       
+                     </script>
                             <p></p>
                             <label for="cuadroTexto18">Telefonos de contacto:</label>
                             <input type="text" id="cuadroTexto18" style="width: 300px">
                             <p></p>
 
-
                             </script>
+                            
                     </div>
 
 
@@ -365,7 +388,7 @@
                         Cierre
                     </h2>
                     <p>
-                        Perfecto señor() <span class="parrafoGuardado" id="parrafo1"> </span>  a continuación
+                        Perfecto señor(a) <span class="parrafoGuardado" id="parrafo1"> </span>  a continuación
                         realizaremos el proceso de validación como contrato verbal del servicio que está adquiriendo con
                         ETB. Recuerde que esta grabación será su contrato de voz y le enviaremos el contrato digital a
                         su correo electrónico..
@@ -481,8 +504,8 @@
 
                     </script>
                     <p></p>
-                    <p>Señor(a) <span class="parrafoGuardado" id="parrafo1"></span> le confirmo su correo electronico es le
-                        voy a deletrear su correo para dejar registro en la llamada : en el correo usted recibirá
+                    <p>Señor(a) <span class="parrafoGuardado" id="parrafo1"></span> le confirmo su correo electronico es : <span id="correoOriginal" class="palabra-original"></span>, le
+                        voy a deletrear su correo para dejar registro en la llamada : <span id="resultadoFinal" class="palabra-reemplazada"></span> : en el correo usted recibirá
                         información de su factura, fecha límite de pago y puntos de recaudo de manera rápida y práctica.
                     </p>
 
@@ -503,7 +526,7 @@
                         });
 
                     </script>
-                    <P> ¿ESTA DE ACUERDO?</P>
+                    <h4>¿Esta deacuerdo?</h4>
 
                     <h2>CANALES DE ATENCIÓN</h2>
                     <P></P>
@@ -561,6 +584,14 @@
 
                         RTA si: de acuerdo lo voy a dejar con el asesor preferencial para que le brinden los beneficios.
                     </P>
+
+                    
+                    <div style="margin-bottom: 200px ;">
+                        
+                      </div>
+                   
+
+
 
 
                     </header>

@@ -21,6 +21,16 @@
             font-size: 20px;
             font-family: 'Helvetica', sans-serif;
         }
+        h5 {
+            color: rgb(255, 0, 0);
+            font-size: 20px;
+            font-family: 'Helvetica', sans-serif;
+        }
+        h6 {
+            color: rgb(255, 0, 0);
+            font-size: 20px;
+            font-family: 'Helvetica', sans-serif;
+        }
         
     </style>
 
@@ -63,7 +73,7 @@
         <p> ¿puede darnos un número de contacto para comunicarnos con el titular? ( Ya que el quien puede
             realizar la aceptación del trámite o ceder el contrato. )</p>
 
-        <p>No conoce el titular:</p>
+        <h4>No conoce el titular:</h4>
 
         <p> ¿Usted es quien hace uso y paga el servicio de ETB?</p>
         <p>¿Me confirma la dirección y teléfono del servicio?</p>
@@ -269,7 +279,7 @@
                     </div>
 
                     <label for="cuadroTexto7">La oferta adquirida es :</label>
-                    <input type="text" id="campoTexto7" style="width: 300px">
+                    <input type="text" id="campoTexto7" style="width: 300px" oninput="capturarNumeros()">
                     <p></p>
                     <label for="cuadroTexto8">Segmento :</label>
                     <input type="text" id="campoTexto8" style="width: 300px">
@@ -303,6 +313,12 @@
                     <p>Agenda y Franja: <span class="parrafoGuardado4" id="parrafo4"> </span></p>
 
                     <script>
+                        function capturarNumeros() {
+      
+                        var text = document.getElementById("campoTexto7").value;
+                        var numeros = text.replace(/[^0-9]/g, '');
+                        document.getElementById("numerosCapturados").textContent = numeros;
+                      }
                         document.addEventListener('DOMContentLoaded', function () {
                             var campoTexto4 = document.getElementById('campoTexto4');
                             var parrafosGuardados4 = document.querySelectorAll('.parrafoGuardado4');
@@ -400,8 +416,9 @@
                         será grabada para el contrato verbal. Generaremos el proceso de validación y aprobación de la
                         información suministrada, por favor responda "SI", a las siguientes preguntas</p>
                     <p>Le confirmo sus datos son los siguientes:</p>
+                    <p><s> Solo cambio de titularidad</s></p>
+                    <p><s>Antes de realizar la validadación de datos me confirma si ¿desea continuar con el cambio de titularidad? </s>.</p>
                     <h2>Validación de datos</h2>
-
                     <p>Su nombre completo es: <span class="parrafoGuardado" id="parrafo1"> </span></p>
 
                     <div id="resultado11">Su tipo y número de documento de identidad es CC/CE/NIT :</div>
@@ -538,17 +555,16 @@
                     <p> la oferta adquirida es : <span class="parrafoGuardado7" id="parrafo7"> </span> </p>
                     <p> Segmento : <span class="parrafoGuardado8" id="parrafo8"></span></p>
                     <p> Tecnologia : Fibra Optica En FTTH</p>
-                    <p>Velocidad del internet</p>
-                    <p> Linea ilimitada local (No aplica Single de voz)</p>
-                    <p> Valor total de la factura será de : $ <span class="parrafoGuardado6" id="parrafo6"></span> Iva
-                        incluido, TARIFA SUJETA A INCREMENTOS TARIFARIOS </p>
+                    <p>Su velocidad del internet es : <span id="numerosCapturados"></span> <b> MEGAS</b> (<s>No aplica Single de Voz</s>)</p>
+                    <p> Linea ilimitada local (<s>No aplica Single de interner</s>)</p>
+                    <p> Valor total de la factura será de : $ <span class="parrafoGuardado6" id="parrafo6"></span> <b>IVA INCLUIDO, TARIFA SUJETA A INCREMENTOS TARIFARIOS</b> </p>
                     <P> Esta oferta cuenta con la promoción : <span class="parrafoGuardado9" id="parrafo9"></span></p>
                     <p>La facturación de este servicio sera mensualida </p>
-                    <p> Punto Cableado Opcional (No Aplica Single De Voz) </p>
+                    <p> Punto Cableado Opcional (<s>No aplica Single de Voz</s>) </p>
                     <p></p>
                     <p></p>
                     <p>Parrilla Plus, 115 canales, 75 HD , 30 SD + 10 Emisoras (indicar Numero de Decos) Grabar y
-                        Retroceder por 12 Meses (SOLO APLICA EN TRIOS)</p>
+                        Retroceder por 12 Meses <b>(SOLO APLICA EN TRIOS)</b></p>
                     <P></P>
                     <P> ¿ESTA DE ACUERDO?</P>
                     <P></P>

@@ -21,6 +21,16 @@
             font-size: 20px;
             font-family: 'Helvetica', sans-serif;
         }
+        h5 {
+            color: rgb(255, 0, 0);
+            font-size: 20px;
+            font-family: 'Helvetica', sans-serif;
+        }
+        h6 {
+            color: rgb(255, 0, 0);
+            font-size: 20px;
+            font-family: 'Helvetica', sans-serif;
+        }
         
     </style>
 
@@ -49,20 +59,6 @@
             </div>
 
 <body>
-
-    
-
-    <script>
-        function mostrarContenido() {
-            var contenido = document.getElementById('contenido');
-
-            if (contenido.style.display === 'none') {
-                contenido.style.display = 'block';
-            } else {
-                contenido.style.display = 'none';
-            }
-        }
-    </script>
 
     <div class="header-content container">
         <div class="content">
@@ -127,22 +123,18 @@
                                     Validación Cliente
                                 </h2>
                             </div>
-                            <p>
-                            <label for="cuadroTexto19">Nombre de la empresa:</label>
-                            <input id="campoTexto" type="text" style="width: 500px">
-                        </p>
                         <p>
-                            <label for="cuadroTexto18">Nit:</label>
-                            <input id="campoTexto" type="text" style="width: 300px"> 
-                            <div style="margin-bottom: 40px ;"></div>
+                            <label for="cuadroTexto18">Nombre de la empresa:</label>
+                            <input id="campoTexto18" type="text" style="width: 500px">
                         </p>
                         
-<p></p>
-                        <label for="cuadroTexto10">Su nombre completo:</label>
+                        <p>
+                            <label for="cuadroTexto19">Nit:</label>
+                            <input id="campoTexto19" type="text" style="width: 200px">
+                            <div style="margin-bottom: 40px ;"></div>
+                        </p>
+                            <label for="cuadroTexto10">Nombre Representante legal(o autorizado): :</label>
                             <input id="campoTexto" type="text" style="width: 300px">
-
-
-
                             <script>
                                 document.addEventListener('DOMContentLoaded', function () {
                                     var campoTexto = document.getElementById('campoTexto');
@@ -157,7 +149,36 @@
                                         });
                                     });
                                 });
+                                document.addEventListener('DOMContentLoaded', function () {
+                            var campoTexto18 = document.getElementById('campoTexto18');
+                            var parrafosGuardados18 = document.querySelectorAll('.parrafoGuardado18');
+
+                            campoTexto18.addEventListener('input', function (event) {
+                                var textoCapturado18 = campoTexto18.value;
+
+                                // Actualiza el contenido en todos los párrafos guardados
+                                parrafosGuardados18.forEach(function (parrafo) {
+                                    parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado18;
+                                });
+                            });
+                        });
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var campoTexto19 = document.getElementById('campoTexto19');
+                            var parrafosGuardados19 = document.querySelectorAll('.parrafoGuardado19');
+
+                            campoTexto19.addEventListener('input', function (event) {
+                                var textoCapturado19 = campoTexto19.value;
+
+                                // Actualiza el contenido en todos los párrafos guardados
+                                parrafosGuardados19.forEach(function (parrafo) {
+                                    parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado19;
+                                });
+                            });
+                        });
+
                             </script>
+                            
+
                             <p>
 
                             </p>
@@ -187,10 +208,7 @@
                         <body>
                             <label for="inputPalabra">Correo electrónico:</label>
                             <input type="text" id="inputPalabra" oninput="reemplazarLetras()" style="height: 15px; width:300px;">
-                            
-                            <div>
-                                
-                            </div>
+                        
                             
                             <div>
                                 <span id="resultadoInicio" class="palabra-reemplazada"></span>
@@ -260,7 +278,7 @@
                     </div>
 
                     <label for="cuadroTexto7">La oferta adquirida es :</label>
-                    <input type="text" id="campoTexto7" style="width: 300px">
+                    <input type="text" id="campoTexto7" style="width: 300px" oninput="capturarNumeros()">
                     <p></p>
                     <label for="cuadroTexto8">Segmento :</label>
                     <input type="text" id="campoTexto8" style="width: 300px">
@@ -294,6 +312,12 @@
                     <p>Agenda y Franja: <span class="parrafoGuardado4" id="parrafo4"> </span></p>
 
                     <script>
+                        function capturarNumeros() {
+      
+                        var text = document.getElementById("campoTexto7").value;
+                        var numeros = text.replace(/[^0-9]/g, '');
+                        document.getElementById("numerosCapturados").textContent = numeros;
+                      }
                         document.addEventListener('DOMContentLoaded', function () {
                             var campoTexto4 = document.getElementById('campoTexto4');
                             var parrafosGuardados4 = document.querySelectorAll('.parrafoGuardado4');
@@ -391,9 +415,14 @@
                         será grabada para el contrato verbal. Generaremos el proceso de validación y aprobación de la
                         información suministrada, por favor responda "SI", a las siguientes preguntas</p>
                     <p>Le confirmo sus datos son los siguientes:</p>
+                   
                     <h2>Validación de datos</h2>
-
-                    <p>Su nombre completo es: <span class="parrafoGuardado" id="parrafo1"> </span></p>
+                    <p></p>
+                    <p>El nombre de la empresa es : <span class="parrafoGuardado18" id="parrafo18"> </span></p>
+                    <p>El Nit es : <span class="parrafoGuardado19" id="parrafo19"> </span>
+                    <div style="margin-bottom: 20px ;"></div>
+                    </p>
+                    <p>Nombre Representante legal(o autorizado): <span class="parrafoGuardado" id="parrafo1"> </span></p>
 
                     <div id="resultado11">Su tipo y número de documento de identidad es CC/CE/NIT :</div>
                     <script>
@@ -529,17 +558,20 @@
                     <p> la oferta adquirida es : <span class="parrafoGuardado7" id="parrafo7"> </span> </p>
                     <p> Segmento : <span class="parrafoGuardado8" id="parrafo8"></span></p>
                     <p> Tecnologia : Fibra Optica En FTTH</p>
-                    <p>Velocidad del internet</p>
-                    <p> Linea ilimitada local (No aplica Single de voz)</p>
+                    <p>Su velocidad del internet es : <span id="numerosCapturados"></span> megas (<s>No aplica Single de Voz</s>)</p>
+                    <p> Linea ilimitada local (<s>No aplica Single de interner</s>)</p>
                     <p> Valor total de la factura será de : $ <span class="parrafoGuardado6" id="parrafo6"></span> Iva
                         incluido, TARIFA SUJETA A INCREMENTOS TARIFARIOS </p>
                     <P> Esta oferta cuenta con la promoción : <span class="parrafoGuardado9" id="parrafo9"></span></p>
                     <p>La facturación de este servicio sera mensualida </p>
-                    <p> Punto Cableado Opcional (No Aplica Single De Voz) </p>
-                    <p></p>
+                    <p> Punto Cableado Opcional (<s>No aplica Single de Voz</s>) </p>
+                    <p><b>• ip fija (Validar oferta indicar cuando aplique) </b></p>
+                    <p><b>• Negocio seguro por 6 meses</b></p>
+                    <p><b>• 50 minutos fijo a movil (no aplica single internet)</b></p>
+                     
                     <p></p>
                     <p>Parrilla Plus, 115 canales, 75 HD , 30 SD + 10 Emisoras (indicar Numero de Decos) Grabar y
-                        Retroceder por 12 Meses (SOLO APLICA EN TRIOS)</p>
+                        Retroceder por 12 Meses <b>(SOLO APLICA EN TRIOS) </b></p>
                     <P></P>
                     <P> ¿ESTA DE ACUERDO?</P>
                     <P></P>

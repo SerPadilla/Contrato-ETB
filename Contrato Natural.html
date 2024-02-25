@@ -8,9 +8,6 @@
     
     <title>Contrato Natural</title>
     <style>
-        #contenido {
-            display: none;
-        }
         #capturaTexto {
             display: inline;
             border-bottom: 1px dashed #000;
@@ -21,17 +18,12 @@
             font-size: 20px;
             font-family: 'Helvetica', sans-serif;
         }
-        h5 {
-            color: rgb(255, 0, 0);
-            font-size: 20px;
-            font-family: 'Helvetica', sans-serif;
-        }
-        h6 {
-            color: rgb(255, 0, 0);
-            font-size: 20px;
-            font-family: 'Helvetica', sans-serif;
-        }
         
+        
+    .oculto {
+      display: none;
+    }
+
     </style>
 <form>
     <header>
@@ -58,9 +50,8 @@
 
 <body>
 
-    <button onclick="mostrarContenido()">Titularidad</button>
-
-    <div id="contenido">
+    <button id="botonMostrar" onclick="mostrarContenido(event)">Titularidad</button>
+    <div id="contenido" class="oculto">
 
         ¿Conoce usted al titular del servicio?</p>
         <p>
@@ -81,16 +72,12 @@
     </div>
 
     <script>
-        function mostrarContenido() {
-            var contenido = document.getElementById('contenido');
-
-            if (contenido.style.display === 'none') {
-                contenido.style.display = 'block';
-            } else {
-                contenido.style.display = 'none';
-            }
+        function mostrarContenido(event) {
+          event.preventDefault(); // Evita el comportamiento por defecto del botón
+          var contenido = document.getElementById('contenido');
+          contenido.classList.toggle('oculto');
         }
-    </script>
+      </script>
 
     <div class="header-content container">
         <div class="content">
@@ -138,7 +125,7 @@
                 <div class="header-content container">
                     <div class="content">
                         <h2>
-                            Autorización centrales de riezgo
+                            Autorización Centrales De Riezgo
                         </h2>
 
 
@@ -272,7 +259,7 @@
 
                     <div>
                         <h2>
-                            Validación oferta
+                            Validación Oferta
                         </h2>
                     </div>
 
@@ -307,7 +294,7 @@
                     <input id="campoTexto" type="text" style="width: 200px">
                     <p></p>
                     <div>
-                        <h2> Validación oferta</h>
+                        <h2> Validación Oferta</h>
                     </div>
 
                     <p>La oferta adquirida es : <span class="parrafoGuardado7" id="parrafo7"> </span></p>
@@ -324,17 +311,11 @@
 
                             campoTexto17.addEventListener('input', function (event) {
                                 var textoCapturado17 = campoTexto17.value;
-
-                                // Actualiza el contenido en todos los párrafos guardados
                                 parrafosGuardados17.forEach(function (parrafo) {
                                     parrafo.textContent = ' ' + parrafo.id.charAt(parrafo.id.length) + ' ' + textoCapturado17;
                                 });
                             });
                         });
-
-
-
-
                         function capturarNumeros() {
       
                         var text = document.getElementById("campoTexto7").value;
@@ -414,7 +395,7 @@
                     </script>
                     <div>
                         <h2>
-                            Informarle al cliente
+                            Informarle Al Cliente
                         </h2>
                         <p>
                             Señor(a) <span class="parrafoGuardado" id="parrafo1"> </span> el numero telefonico de su
@@ -565,7 +546,7 @@
                         });
 
                     </script>
-                    <h4><b>¿ESTA DEACUERDO?</b></h4>
+                    <h4><b>¿ESTA DE ACUERDO?</b></h4>
 
                     <h2>Canales De Atención</h2>
                     <P></P>
@@ -588,7 +569,7 @@
                     <p>Parrilla Plus, 115 canales, 75 HD , 30 SD + 10 Emisoras (indicar Numero de Decos) Grabar y
                         Retroceder por 12 Meses <b>(SOLO APLICA EN TRIOS)</b></p>
                     <P></P>
-                    <h4><b>¿ESTA DEACUERDO?</b></h4>
+                    <h4><b>¿ESTA DE ACUERDO?</b></h4>
                     <P></P>
                     <p>
                     <h2>
@@ -599,7 +580,7 @@
                         promoción. </P>
                     <p>• SVA adquirido: <span class="parrafoGuardado17" id="parrafo17"> </span></p>
                     </p></P>
-                    <h4><b>¿ESTA DEACUERDO?</b></h4>
+                    <h4><b>¿ESTA DE ACUERDO?</b></h4>
                     <P></P>
                     <h2>cláusula De Permanencia</h2>
                     <P> Señor(a) <span class="parrafoGuardado" id="parrafo1"> </span> , el nuevo servicio contratado no le

@@ -22,7 +22,21 @@
         
     .oculto {
       display: none;
+    }  
+    
+    #check {
+      width: 15px;
+      height: 15px;
+     
     }
+    
+    .divisor {
+      width: 100%;
+      height: 2px;
+      background-color: #5c5858;
+      margin: 20px auto;
+    }
+   
 
     </style>
 <form>
@@ -47,7 +61,7 @@
                 </p>
 
             </div>
-
+            
 <body>
 
     <button id="botonMostrar" onclick="mostrarContenido(event)">Titularidad</button>
@@ -125,7 +139,7 @@
                 <div class="header-content container">
                     <div class="content">
                         <h2>
-                            Autorización Centrales De Riezgo
+                            Autorización Centrales De Riesgo
                         </h2>
 
 
@@ -134,8 +148,9 @@
                             crediticio a centrales de riesgo?
                             De acuerdo con lo anterior, si su respuesta es afirmativa,responda"SI". SI=
                             continuar con la migración.
-
                         </p>
+                        <div class="divisor"></div>
+
                         <div class="header-content container">
                             <div class="content">
                                 <h2>
@@ -293,6 +308,7 @@
                     <label for="cuadroTexto">Linea a migrar:</label>
                     <input id="campoTexto" type="text" style="width: 200px">
                     <p></p>
+                    <div class="divisor"></div>
                     <div>
                         <h2> Validación Oferta</h>
                     </div>
@@ -412,6 +428,7 @@
                         ETB. Recuerde que esta grabación será su contrato de voz y le enviaremos el contrato digital a
                         su correo electrónico..
                     </p>
+                    <div class="divisor"></div>
 
                     <h2>Huella de voz</h2>
                     <p> Señor(a) <span class="parrafoGuardado" id="parrafo1"> </span> a partir de este momento vamos a
@@ -422,9 +439,9 @@
                     <p><s> Solo cambio de titularidad</s></p>
                     <p><s>Antes de realizar la validadación de datos me confirma si ¿desea continuar con el cambio de titularidad? </s>.</p>
                     <h2>Validación de datos</h2>
-                    <p>Su nombre completo es: <span class="parrafoGuardado" id="parrafo1"> </span></p>
+                    <p>Su nombre completo es: <span class="parrafoGuardado" id="parrafo1"> </span> <input type="checkbox" id="check"></p>
 
-                    <div id="resultado11">Su tipo y número de documento de identidad es CC/CE/NIT :</div>
+                    <div id="resultado11">Su tipo y número de documento de identidad es CC/CE/NIT : <input type="checkbox" id="check"></div>
                     <script>
                         var cuadroTexto11 = document.getElementById('cuadroTexto11');
                         var resultado11 = document.getElementById('resultado11');
@@ -440,7 +457,7 @@
                         });    
                     </script>
                     <P></P>
-                    <div id="resultado12">Su fecha de expedición del documento es: </div>
+                    <div id="resultado12">Su fecha de expedición del documento es: <input type="checkbox" id="check"></div>
 
                     <script>
                         var cuadroTexto12 = document.getElementById('cuadroTexto12');
@@ -458,7 +475,7 @@
 
                     </script>
                     <P></P>
-                    <div id="resultado13">Su dirección completa de instalación del predio es :</div>
+                    <div id="resultado13">Su dirección completa de instalación del predio es : <input type="checkbox" id="check"></div>
                     <script>
                         var cuadroTexto13 = document.getElementById('cuadroTexto13');
                         var resultado13 = document.getElementById('resultado13');
@@ -474,7 +491,7 @@
                         });
                     </script>
                     <p></p>
-                    <div id="resultado17">Su tipo de edificación es :</div>
+                    <div id="resultado17">Su tipo de edificación es : <input type="checkbox" id="check"></div>
                     <script>
                         var cuadroTexto17 = document.getElementById('cuadroTexto17');
                         var resultado17 = document.getElementById('resultado17');
@@ -491,7 +508,7 @@
 
                     </script>
                     <P></P>
-                    <div id="resultado14">Su servicio se encuentra ubicado en el barrio: </div>
+                    <div id="resultado14">Su servicio se encuentra ubicado en el barrio:  <input type="checkbox" id="check"></div>
                     <script>
                         var cuadroTexto14 = document.getElementById('cuadroTexto14');
                         var resultado14 = document.getElementById('resultado14');
@@ -507,7 +524,7 @@
                         });
                     </script>
                     <P></P>
-                    <div id="resultado15">Su estrato es :</div>
+                    <div id="resultado15">Su estrato es : <input type="checkbox" id="check"></div>
                     <script>
                         var cuadroTexto15 = document.getElementById('cuadroTexto15');
                         var resultado15 = document.getElementById('resultado15');
@@ -526,11 +543,11 @@
                     <p></p>
                     <p>Señor(a) <span class="parrafoGuardado" id="parrafo1"></span> le confirmo su correo electronico es : <span id="correoOriginal" class="palabra-original"></span>, le
                         voy a deletrear su correo para dejar registro en la llamada : <span id="resultadoFinal" class="palabra-reemplazada"></span> : en el correo usted recibirá
-                        información de su factura, fecha límite de pago y puntos de recaudo de manera rápida y práctica.
+                        información de su factura, fecha límite de pago y puntos de recaudo de manera rápida y práctica. <input type="checkbox" id="check">
                     </p>
 
 
-                    <div id="resultado18">Sus telefonos de contacto son :</div>
+                    <div id="resultado18">Sus telefonos de contacto son : <input type="checkbox" id="check"></div>
                     <script>
                         var cuadroTexto18 = document.getElementById('cuadroTexto18');
                         var resultado18 = document.getElementById('resultado18');
@@ -599,15 +616,21 @@
                         inquietud puede llamarnos a nuestra línea de atención 6013777777 o 018000112170. ¡Hasta pronto!
                     </P>
                     <p></p>
-
+                    <div class="divisor"></div>
                     <h2>Oferta Comercial</h2>
                     <p></p>
                     <P>"Señor(a) <span class="parrafoGuardado" id="parrafo1"> </span> al realizar el cambio de
                         tecnología en este momento usted aplica un beneficio adicional llamado ETB total donde puede
                         tener hasta 5 línea con nuestros planes preferenciales o tener el beneficio de familia y amigos"
-
-                        RTA si: de acuerdo lo voy a dejar con el asesor preferencial para que le brinden los beneficios.
                     </P>
+                    <p>
+                        RTA si esta de acuerdo lo voy a dejar con el asesor preferencial para que le brinden los beneficios.
+                    </P>
+                    <h2>Manejo de Objeción</h2>
+                    <p> Puede contar con planes desde 17.000 o plan ilimitado con mas beneficios.</p>
+                    <p>RTA si esta deacuerdo lo dejaré con el asesor preferencial para que le brinden la información </p>
+                    
+
 
                     
 
